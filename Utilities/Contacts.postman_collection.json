@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "d40dff85-e1f2-427c-8a33-735f6ebf8a43",
+		"name": "Contacts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetContact",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/contacts/{{contactId}}",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"contacts",
+						"{{contactId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateContact",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Contact Created.\", () => {\r",
+							"    const responseJson = pm.response.json();\r",
+							"    pm.expect(responseJson).to.be.above(0);\r",
+							"    pm.environment.set(\"contactId\", responseJson);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": {\r\n        \"first\": \"Harold\",\r\n        \"middle\": \"Francis\",\r\n        \"last\": \"Gilkey\"\r\n    },\r\n    \"address\": {\r\n        \"street\": \"8360 High Autumn Row\",\r\n        \"city\": \"Cannon\",\r\n        \"state\": \"Delaware\",\r\n        \"zip\": \"19797\"\r\n    },\r\n    \"phone\": [\r\n        {\r\n        \"number\": \"302-611-9148\",\r\n        \"type\": \"home\"\r\n        },\r\n        {\r\n        \"number\": \"302-532-9427\",\r\n        \"type\": \"mobile\"\r\n        }\r\n    ],\r\n    \"email\": \"harold.gilkey@yahoo.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/contacts",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteContact",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/contacts/{{contactId}}",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"contacts",
+						"{{contactId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetContacts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCallList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateContact",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
