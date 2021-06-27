@@ -3,7 +3,6 @@ using Contacts.Domain.Constants;
 using Contacts.Domain.Entities;
 using Contacts.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,7 +20,7 @@ namespace Contacts.Infrastructure.Repositories
 
         public async Task AddContactAsync(Contact contact)
         {
-            var result = await this._context.AddAsync(contact);
+            await this._context.AddAsync(contact);
             await this._context.SaveChangesAsync();
         }
 

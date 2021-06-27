@@ -8,7 +8,7 @@ namespace Contacts.API.Application.Models
 
         public AddressModel Address { get; set; }
 
-        public List<PhoneModel> Phone { get; set; } = new List<PhoneModel>();
+        public List<PhoneModel> Phone { get; set; }
 
         public string Email { get; set; }
     }

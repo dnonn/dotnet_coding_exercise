@@ -1,11 +1,9 @@
 ﻿using Contacts.API.Application.Commands;
 using Contacts.API.Application.Models;
-using Contacts.Domain.Entities;
 using Contacts.Domain.Repositories;
 using MediatR;
 using Moq;
 using System.Collections.Generic;
-using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
