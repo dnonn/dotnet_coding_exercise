@@ -7,3 +7,10 @@ Reference architectures can be found here:
 - https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/src
 
 Tests are lacking due to time constraints, so a postman collection has been included for end-to-end testing purposes.
+
+Some items that could be improved:
+- Expand unit test coverage.
+- Validate the address with a third-party service.
+- Validate the lengths of text inputs.
+- Validate phone numbers.
+- More thorough comments.
