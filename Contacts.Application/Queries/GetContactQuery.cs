@@ -1,6 +1,5 @@
 ﻿using Contacts.API.Application.Models;
 using MediatR;
-using System;
 
 namespace Contacts.API.Application.Queries
 {

@@ -1,9 +1,7 @@
-using Contacts.API.Application.Behavior;
+using Contacts.Application;
 using Contacts.Domain.Repositories;
 using Contacts.Infrastructure;
 using Contacts.Infrastructure.Repositories;
-using FluentValidation;
-using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -28,18 +26,9 @@ namespace Contacts.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
-            var migrationAssembly = typeof(ContactContext).GetTypeInfo().Assembly.GetName().Name;
-
-            services.AddDbContext<ContactContext>(
-                options => options.UseSqlite(Configuration.GetConnectionString("DefaultConnection"),
-                sqlite => sqlite.MigrationsAssembly(migrationAssembly)));
             
-            services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
-            services.AddMediatR(Assembly.GetExecutingAssembly());
-            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
-
-            services.AddTransient<IContactRepository, ContactRepository>();
+            services.AddApplicationServices();
+            services.AddInfrastructureServices(Configuration);
 
             services.AddSwaggerGen(c =>
             {
