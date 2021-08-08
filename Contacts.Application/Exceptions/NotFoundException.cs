@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Contacts.API.Application.Exceptions
+namespace Contacts.Application.Exceptions
 {
     public class NotFoundException : ApplicationException
     {

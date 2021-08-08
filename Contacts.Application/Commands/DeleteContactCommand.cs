@@ -1,7 +1,6 @@
 ﻿using MediatR;
-using System;
 
-namespace Contacts.API.Application.Commands
+namespace Contacts.Application.Commands
 {
     public class DeleteContactCommand : IRequest
     {

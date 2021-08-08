@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace Contacts.API.Application.Models
+namespace Contacts.Application.Models
 {
     public class ContactModel
     {
         public int Id { get; set; }
-        
+
         public NameModel Name { get; set; }
 
         public AddressModel Address { get; set; }

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Contacts.API.Application.Models
+namespace Contacts.Application.Models
 {
     public class CreateOrUpdateContactModel
     {

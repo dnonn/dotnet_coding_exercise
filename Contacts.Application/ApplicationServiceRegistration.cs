@@ -2,7 +2,7 @@
 using System.Reflection;
 using FluentValidation;
 using MediatR;
-using Contacts.API.Application.Behavior;
+using Contacts.Application.Behaviors;
 
 namespace Contacts.Application
 {
@@ -14,6 +14,7 @@ namespace Contacts.Application
             services.AddMediatR(Assembly.GetExecutingAssembly());
 
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(UnhandledExceptionBehavior<,>));
 
             return services;
         }

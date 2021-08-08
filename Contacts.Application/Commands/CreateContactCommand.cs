@@ -1,7 +1,7 @@
-﻿using Contacts.API.Application.Models;
+﻿using Contacts.Application.Models;
 using MediatR;
 
-namespace Contacts.API.Application.Commands
+namespace Contacts.Application.Commands
 {
     public class CreateContactCommand : IRequest<int>
     {

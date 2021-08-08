@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Contacts.API.Application.Exceptions
+namespace Contacts.Application.Exceptions
 {
     public class ValidationException : ApplicationException
     {

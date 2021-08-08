@@ -1,5 +1,5 @@
-﻿using Contacts.API.Application.Commands;
-using Contacts.API.Application.Models;
+﻿using Contacts.Application.Commands;
+using Contacts.Application.Models;
 using Contacts.Domain.Repositories;
 using MediatR;
 using Moq;

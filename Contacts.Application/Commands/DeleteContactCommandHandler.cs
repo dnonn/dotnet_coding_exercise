@@ -1,10 +1,10 @@
-﻿using Contacts.API.Application.Exceptions;
+﻿using Contacts.Application.Exceptions;
 using Contacts.Domain.Repositories;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Contacts.API.Application.Commands
+namespace Contacts.Application.Commands
 {
     public class DeleteContactCommandHandler : IRequestHandler<DeleteContactCommand>
     {

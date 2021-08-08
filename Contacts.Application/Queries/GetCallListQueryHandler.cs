@@ -1,4 +1,4 @@
-﻿using Contacts.API.Application.Models;
+﻿using Contacts.Application.Models;
 using Contacts.Domain.Repositories;
 using MediatR;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Contacts.API.Application.Queries
+namespace Contacts.Application.Queries
 {
     public class GetCallListQueryHandler : IRequestHandler<GetCallListQuery, List<HomeContactModel>>
     {

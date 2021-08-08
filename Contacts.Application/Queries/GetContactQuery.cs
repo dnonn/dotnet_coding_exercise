@@ -1,7 +1,7 @@
-﻿using Contacts.API.Application.Models;
+﻿using Contacts.Application.Models;
 using MediatR;
 
-namespace Contacts.API.Application.Queries
+namespace Contacts.Application.Queries
 {
     public class GetContactQuery : IRequest<ContactModel>
     {

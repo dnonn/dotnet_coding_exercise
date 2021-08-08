@@ -1,10 +1,6 @@
 ﻿using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace Contacts.API.Application.Models
+namespace Contacts.Application.Models
 {
     public class CreateOrUpdateContactModelValidator : AbstractValidator<CreateOrUpdateContactModel>
     {

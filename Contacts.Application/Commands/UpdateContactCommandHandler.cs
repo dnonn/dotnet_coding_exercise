@@ -1,4 +1,4 @@
-﻿using Contacts.API.Application.Exceptions;
+﻿using Contacts.Application.Exceptions;
 using Contacts.Domain.Entities;
 using Contacts.Domain.Repositories;
 using MediatR;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Contacts.API.Application.Commands
+namespace Contacts.Application.Commands
 {
     public class UpdateContactCommandHandler : IRequestHandler<UpdateContactCommand, int>
     {
@@ -35,7 +35,7 @@ namespace Contacts.API.Application.Commands
             contact.Address.City = request.Contact.Address.City;
             contact.Address.Zip = request.Contact.Address.Zip;
             contact.Address.Street = request.Contact.Address.Street;
-            
+
             contact.Phone = request.Contact.Phone.Select(p => new Phone
             {
                 Number = p.Number,

@@ -1,9 +1,8 @@
-﻿using Contacts.API.Application.Commands;
-using Contacts.API.Application.Models;
-using Contacts.API.Application.Queries;
+﻿using Contacts.Application.Commands;
+using Contacts.Application.Models;
+using Contacts.Application.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;

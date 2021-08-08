@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Contacts.API.Application.Commands
+namespace Contacts.Application.Commands
 {
     public class CreateContactCommandHandler : IRequestHandler<CreateContactCommand, int>
     {

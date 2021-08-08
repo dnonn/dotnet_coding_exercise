@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Contacts.API.Application.Models
+namespace Contacts.Application.Models
 {
     public class NameModelValidator : AbstractValidator<NameModel>
     {
